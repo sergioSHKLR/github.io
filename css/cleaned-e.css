@@ -1,0 +1,246 @@
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.content {
+  height: 100%;
+  hyphens: auto;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 40px;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.content-wrapper {
+  height: 95vh;
+  overflow: auto;
+  width: 60vw;
+}
+
+.iframe-wrapper {
+  border: 1px solid lightgray;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40vw;
+  z-index: 3;
+}
+
+.navbar {
+  background-color: #444;
+  bottom: 0;
+  font-family: sans;
+  float: left;
+  overflow: hidden;
+  position: fixed;
+  width: 60vw;
+}
+
+.navbar a.active {
+  background-color: #222;
+  color: white;
+}
+
+.navbar button,
+.navbar a,
+.navbar span {
+  background-color: transparent;
+  border: none;
+  color: white;
+  float: left;
+  font-size: 100%;
+  padding: 11px 13px 7px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pro5 {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+.turn-device {
+  border: 1px solid indianred;
+  color: indianred;
+  display: none !important;
+}
+
+body {
+  background-color: ghostwhite;
+  color: black;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+iframe {
+  border: none;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 95%;
+}
+
+@media only screen and (orientation: portrait) {
+  div.turn-device {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .content-wrapper,
+  .navbar {
+    width: 100vw;
+  }
+
+  .iframe-wrapper,
+  iframe {
+    display: none;
+  }
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: ghostwhite;
+    color: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: white;
+  }
+}
+
+.cursive-apple {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 120%;
+  text-decoration: none;
+}
+
+.cursive-caveat {
+  font-family: 'Caveat', cursive;
+  text-decoration: none;
+}
+
+.sans {
+  font-family: 'Lato', sans;
+}
+
+.serif {
+  font-family: 'Lora', serif;
+}
+
+.hyphens {
+  hyphens: auto;
+}
+
+.last-left {
+  text-align-last: left;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.smaller {
+  font-size: 80%;
+}
+
+.larger {
+  font-size: 120%;
+}
+
+.hr-50 {
+  width: 50vw;
+}
+
+.hr-100 {
+  width: 100vw;
+}
+
+.content a:any-link {
+  text-decoration: underline solid royalblue 1px;
+  text-decoration-thickness: 1px solid royalblue;
+  text-underline-offset: .1em;
+  color: royalblue;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  text-align: center;
+  hyphens: none;
+}
+
+.eoc {
+  margin-bottom: 40px;
+}
+
+.navbar img {
+  width: 24px;
+  height: 24px;
+}
+
+.lazy {
+  background-image: none;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent red transparent;
+}

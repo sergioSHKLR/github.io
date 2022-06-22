@@ -1,0 +1,39 @@
+LDE
+darkblue
+#00008b
+
+LDM
+darkorchid
+#9932cc
+
+ESE
+darkcyan
+#008b8b
+
+CEU
+darkorange
+#ff8c00
+
+GEN
+darkgreen
+#006400
+
+DOU
+darkslategray
+#2f4f4f
+
+PRO5
+red
+#ff0000
+
+Beige (bible)
+#F5F5DC
+
+\b[XIVLCDM]+\b
+Regex (enable case) to find roman
+
+Circle bullet
+•
+
+EOC
+❦

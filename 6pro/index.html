@@ -1,0 +1,951 @@
+
+<!-- #region TOP -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+<meta name="color-scheme" content="dark light">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script async src="https://hypothes.is/embed.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<!-- #endregion -->
+<!-- #region CHANGEME1 -->
+<title>Projeto 5 | Doutrina.org</title>
+<link rel="stylesheet" type="text/css" href="../css/cleaned-alt.css" />
+<link rel="icon" type="image/png" href="./favicon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- #endregion -->
+<style>
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.content {
+  height: 100%;
+  hyphens: auto;
+  margin-bottom: 30px;
+  margin-left: 25px;
+  margin-right: 10px;
+  text-align: justify;
+  text-justify: auto;
+}
+
+.content-wrapper {
+  height: 95vh;
+  overflow: auto;
+  width: 60vw;
+}
+
+.iframe-wrapper {
+  border: 1px solid lightgray;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 40vw;
+  z-index: 3;
+}
+
+.navbar {
+  background-color: #444;
+  bottom: 0;
+  font-family: sans;
+  float: left;
+  overflow: hidden;
+  position: fixed;
+  width: 60vw;
+}
+
+.navbar a.active {
+  background-color: #222;
+  color: white;
+}
+
+.navbar button,
+.navbar a,
+.navbar span {
+  background-color: transparent;
+  border: none;
+  color: white;
+  float: left;
+  font-size: 100%;
+  padding: 11px 13px 7px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.projeto5 {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+
+.turn-device {
+  border: 1px solid indianred;
+  color: indianred;
+  display: none !important;
+}
+
+body {
+  background-color: ghostwhite;
+  color: black;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+iframe {
+  border: none;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  width: 95%;
+}
+
+@media only screen and (orientation: portrait) {
+  div.turn-device {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .content-wrapper,
+  .navbar {
+    width: 100vw;
+  }
+
+  .iframe-wrapper,
+  iframe {
+    display: none;
+  }
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: ghostwhite;
+    color: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333;
+    color: white;
+  }
+}
+
+.cursive-apple {
+  font-family: 'Homemade Apple', cursive;
+  font-size: 120%;
+  text-decoration: none;
+}
+
+.cursive-caveat {
+  font-family: 'Caveat', cursive;
+  text-decoration: none;
+}
+
+.sans {
+  font-family: 'Lato', sans;
+}
+
+.serif {
+  font-family: 'Lora', serif;
+}
+
+.hyphens {
+  hyphens: auto;
+}
+
+.last-left {
+  text-align-last: left;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.smaller {
+  font-size: 80%;
+}
+
+.larger {
+  font-size: 120%;
+}
+
+.hr-50 {
+  width: 50vw;
+}
+
+.hr-100 {
+  width: 100vw;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  text-align: center;
+  hyphens: none;
+}
+
+.eoc {
+  margin-bottom: 40px;
+}
+
+.navbar img {
+  width: 24px;
+  height: 24px;
+}
+
+.lazy {
+  background-image: none;
+}
+
+.collapsible {
+  cursor: pointer;
+  width: 80%;
+  border: 1px solid dimgray;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  color: gray;
+	padding: 20px;
+}
+.active2 {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+}
+.collapsible:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.active2:after {
+  content: "\2212";
+}
+.content1 {
+  display: none;
+  overflow-x: auto;
+}
+table {
+width: 80%;
+font-size:1rem;
+font-family: sans;
+text-align: center;
+color: gray;
+}
+td a:any-link {
+text-decoration: none;
+color: dodgerblue;
+}
+th, td {
+  padding: 15px 10px 15px 10px;
+text-align: center;
+}
+	button {background-color: transparent;}
+</style>
+</head>
+<div class="navbar" style="background-color: red;">
+<a class="active" href="../index.html" title="Doutrina.org"><img src="../ico/home.svg"></a>
+<a title="Contato" href="https://forms.gle/zo6RQqdBU3R3uPKk8" target="iframe"><img src="../ico/help.svg"></a>
+<!-- #endregion -->
+<!-- #region FRAMEWORK -->
+<div style="float: right">
+<button title="Diminuir Letra" class="fontSize" type="button" value="-1" id="decreasetext"><img src="../ico/decrease.svg"></button>
+<button title="Aumentar Letra" class="fontSize" type="button" value="+1" id="increasetext"><img src="../ico/increase.svg"></button>
+<button title="Tela Escura" class="dark-button"><img src="../ico/moon2.svg"></button>
+<button title="Tela Clara" class="light-button" hidden="hidden"><img src="../ico/sun.svg"></button>
+<button title="Tela Cheia" class="fullscreen" onclick="openFullscreen();"><img src="../ico/full.svg"></button>
+<button title="Tela Cheia" class="normalscreen" onclick="closeFullscreen();" hidden="hidden"><img src="../ico/normal.svg"></button>
+<a title="Topo da Página" href="#top"><img src="../ico/arrow-up.svg"></a>
+<span> </span>
+</div name="end-float-right">
+</div name="end-navbar">
+<div class="iframe-wrapper">
+<iframe class="iframe" name="iframe" src="../angel-splash.html"></iframe>
+</div name="end-iframe-wrapper">
+<body>
+<div class="content-wrapper">
+<div class="content">
+<p id="top"> </p name="end-top">
+
+<!-- #endregion -->
+<!-- #region CONTENT -->
+<div class="content-wrapper">
+<div class="content">
+<p id="top">&nbsp;</p name="end-top">
+<p class="sans"><b>Projeto 5</b></p>
+<button type="button" class="collapsible">Janeiro</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Fevereiro</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Março</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Abril</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Maio</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Junho</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<a href="../2ldm/p2/c29.html#J158"><td>07</td></a>
+</tr>
+<tr>
+<td><a href="../2ldm/p2/c29.html#J159">08</a></td>
+<td><a href="../2ldm/p2/c29.html#J160">09</a></td>
+<td><a href="../2ldm/p2/c30.html#J161">10</a></td>
+<td><a href="../2ldm/p2/c31.html#J162">11</a></td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td><a href="../3ese/p0/00.html#J168">17</a></td>
+<td><a href="../3ese/p0/02.html#J169">18</a></td>
+<td><a href="../3ese/p0/02.html#J170">19</a></td>
+<td><a href="../3ese/p0/03.html#J171">20</a></td>
+<td><a href="../3ese/p0/04.html#J172">21</a></td>
+</tr>
+<tr>
+<td><a href="../3ese/p1/c01.html#J173">22</a></td>
+<td><a href="../3ese/p1/c01.html#J174">23</a></td>
+<td><a href="../3ese/p1/c02.html#J175">24</a></td>
+<td><a href="../3ese/p1/c03.html#J176">25</a></td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Julho</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Agosto</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Setembro</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Outubro</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Novembro</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<button type="button" class="collapsible">Dezembro</button>
+<div class="content1">
+  <table>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+<td>03</td>
+<td>04</td>
+<td>05</td>
+<td>06</td>
+<td>07</td>
+</tr>
+<tr>
+<td>08</td>
+<td>09</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+</tr>
+<tr>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+</tr>
+<tr>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+</tr>
+<tr>
+<td>29</td>
+<td>30</td>
+<td>31</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<!-- #endregion -->
+</div name="end-content-wrapper">
+</div name="end-main">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div name="end-content"><!-- #endregion -->
+<!-- #region BOTTOM -->
+</div name="end-content-wrapper">
+
+</body>
+<script src="../js/jquery.min-a.js"></script>
+<script src="../js/fullscreen-a.js"></script>
+<script id="rendered-js" src="../js/font-scaler-a.js"></script>
+<script id="rendered-js" src="../js/dark-light-a.js"></script>
+<script src="../js/collapsible-b.js"></script>
+</html>
